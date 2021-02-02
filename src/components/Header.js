@@ -1,19 +1,38 @@
 import React from 'react'
 import Footer from './Footer'
 import avatar from '../assets/images/FotoPerfil.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapPin } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => (
   <header id="header">
+    <ul className="icons">
+      <li>
+        <a href="#" className="icon  fa-instagram">
+          <span className="label">Instagram</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" className="icon fa-github">
+          <span className="label">Github</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" className="icon fa-envelope-o">
+          <span className="label">Email</span>
+        </a>
+      </li>
+    </ul>
     <h1>
       Desenvolvedor Web
       <strong>Breno Lucas</strong>
     </h1>
+
     <div className="inner">
       <a href="#" className="image avatar">
         <img src={avatar} alt="" />
       </a>
-      <i class="fas fa-map-marker-alt"></i>
-
+      <FontAwesomeIcon icon={faMapPin} className="icon" />
       <p>Fortaleza-Ce</p>
     </div>
 
