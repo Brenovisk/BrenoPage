@@ -3,10 +3,11 @@ import Helmet from 'react-helmet'
 
 import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
+import LabelBottomNavigation from '../components/Menu/index.js'
 
 const HomeIndex = () => {
-  const siteTitle = 'Gatsby Starter - Strata'
-  const siteDescription = 'Site description'
+  const siteTitle = 'BrenoLucas'
+  const siteDescription = 'Site pessoal de Breno Lucas'
 
   return (
     <Layout>
@@ -14,6 +15,7 @@ const HomeIndex = () => {
         <title>{siteTitle}</title>
         <meta name="description" content={siteDescription} />
       </Helmet>
+      <LabelBottomNavigation />
 
       <div id="main">
         <section id="one">
