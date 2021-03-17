@@ -1,9 +1,24 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
+//Imports Components
 import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
 import LabelBottomNavigation from '../components/Menu/index.js'
+import CardLogo from '../components/CardLogo'
+
+//Imports Logos
+import NepenLogo from '../assets/images/Logos/nepenlogo.svg'
+import CssLogo from '../assets/images/Logos/css.svg'
+import HtmlLogo from '../assets/images/Logos/html-5.svg'
+import JSLogo from '../assets/images/Logos/js.png'
+import ReactLogo from '../assets/images/Logos/React.svg'
+import StyledComp from '../assets/images/Logos/StyledComp.svg'
+import GitLogo from '../assets/images/Logos/Git.svg'
+import JavaLogo from '../assets/images/Logos/Java.svg'
+import PHPLogo from '../assets/images/Logos/PHP.svg'
+
+import { Grid } from '@material-ui/core'
 
 const HomeIndex = () => {
   const siteTitle = 'BrenoLucas'
@@ -27,17 +42,53 @@ const HomeIndex = () => {
               <h2>Um pouco sobre mim...</h2>
             </header>
             <p>
-              Sou Desenvolvedor Web FrontEnd fascinado por UI/UX design e novas
-              tecnologias. Com criatividade e empenho desenvolvo interfaces
-              funcionais e minimalistas com foco total na necessidade do
-              cliente.
+              Sou <b>Desenvolvedor Web FrontEnd</b> fascinado por{' '}
+              <b>UI/UX design</b> e novas tecnologias. Com criatividade e
+              empenho desenvolvo interfaces funcionais e minimalistas com foco
+              total na necessidade do cliente.
             </p>
 
-            <b>Empresa atual: </b>
+            <Grid container spacing={5}>
+              <Grid item>
+                <div className="title-logo">
+                  <b>Empresa atual: </b>
+                  <CardLogo
+                    img={NepenLogo}
+                    title="Núcleo de Estudos e Pesquisa do Nordeste"
+                  />
+                </div>
+              </Grid>
+              <Grid item>
+                <div className="title-logo">
+                  <b>Principais Tecnologias: </b>
+                  <Grid container spacing={2}>
+                    <CardLogo img={JSLogo} title="JavaScript" />
+                    <CardLogo img={CssLogo} title="CSS 3" />
+                    <CardLogo img={HtmlLogo} title="HTML 5" />
+                    <CardLogo img={ReactLogo} title="React" />
+                    <CardLogo img={GitLogo} title="Git" />
+                    <CardLogo img={StyledComp} title="Styled Components" />
+                    <CardLogo img={JavaLogo} title="Java" />
+                    <CardLogo img={PHPLogo} title="PHP" />
+                  </Grid>
+                </div>
+              </Grid>
+            </Grid>
+            <Grid container spacing={5}>
+              <Grid item>
+                <div className="title-logo">
+                  <b>Hard Skills </b>
+                  <CardLogo
+                    img={NepenLogo}
+                    title="Núcleo de Estudos e Pesquisa do Nordeste"
+                  />
+                </div>
+              </Grid>
+            </Grid>
           </section>
         </Element>
 
-        <Element name="projects">
+        {/* <Element name="projects">
           <section id="two">
             <header className="major">
               <h2>Projetos</h2>
@@ -78,8 +129,8 @@ const HomeIndex = () => {
           </section>
         </Element>
 
-        <Element name="contact">
-          <section id="three">
+        <Element name="contact"> */}
+        {/* <section id="three">
             <header className="major">
               <h2>Contato</h2>
             </header>
@@ -152,7 +203,7 @@ const HomeIndex = () => {
               </div>
             </div>
           </section>
-        </Element>
+        </Element> */}
       </div>
     </Layout>
   )

@@ -13,8 +13,8 @@
 	@import "libs/skel";
 
 	@include skel-breakpoints((
-		xlarge: '(max-width: 1800px)',
-		large: '(max-width: 1280px)',
+		xlarge: '(max-width: 3000px)',
+		large: '(max-width: 1500px)',
 		medium: '(max-width: 980px)',
 		small: '(max-width: 736px)',
 		xsmall: '(max-width: 480px)'
@@ -40,7 +40,7 @@
 		)
 	));
 
-	$size-header-width: 35%;
+	$size-header-width: 30%;
 	$size-header-pad: 4em;
 
 /* Basic */
@@ -59,7 +59,7 @@
 	body, input, select, textarea {
 		color: _palette(fg);
 		font-family: _font(family);
-		font-size: 16pt;
+		font-size: 13pt;
 		font-weight: _font(weight);
 		line-height: 1.75em;
 	}
@@ -92,7 +92,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: _palette(fg-bold);
-		font-weight: _font(weight-bold);
+		font-weight: _font(weight);
 		line-height: 1em;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
 
@@ -237,6 +237,8 @@
 		&.major {
 			h2 {
 				font-size: 2em;
+				color: mix(_palette(accent1,bg), #000000, 90%),
+				
 			}
 		}
 	}
@@ -961,7 +963,7 @@
 		h1 {
 			color: _palette(accent2, fg-bold);
 			font-size: 1.35em;
-			font-weight: 200;
+			font-weight: 500;
 			line-height: 1.75em;
 			margin: 0;
 			display:flex;
@@ -972,26 +974,29 @@
 
 		.image.avatar {
 			margin: 0 0 (_size(element-margin) * 0) 0;
-			width: 16.25em;
+			width: 13em;
+			z-index: 1;
+
 		}
 
 		.waves {
 			position: absolute;
-			transform: scaleY(2);
+			// transform: scaleY(2);
 			bottom: 0;
 			left: 0;
 			right: 0;
-			height:800px;
+			height:700px;
+			width: 100%;
 			z-index: -1;
 		}
 
 		.wave1 {
 			animation: moveWave1 10s ease-in-out  infinite alternate !important;
-			transform: scale(3,3);
+			// transform: scale(3,3);
 		}
 
 		@keyframes moveWave1 {
-			from{transform: translateX(-200px) scale(3,3);	}
+			from{transform: translateX(-500px) scale(3,3);	}
 			to {transform: translateX(0px) scale(3,3);}
 		}
 
@@ -1001,17 +1006,17 @@
 		}
 
 		@keyframes moveWave2 {
-			from{transform: translateX(-400px) scale(3,3);	}
-			to {transform: translateX(0px) scale(3,3);}
+			from{transform: translateX(0px) scale(3,3);	}
+			to {transform: translateX(-1000px) scale(3,3);}
 		}
 
 		.wave3{
 			animation: moveWave3 10s ease-in-out  infinite alternate !important;
-			transform: scale(3,3);
+			// transform: scale(3,3);
 		}
 
 		@keyframes moveWave3 {
-			from{transform: translateX(-600px) scale(3,3);	}
+			from{transform: translateX(-1500px) scale(3,3);	}
 			to {transform: translateX(0px) scale(3,3);}
 		  }
 
@@ -1069,7 +1074,7 @@
 		// border:solid 1px red;
 		right:0;
 		position: fixed;
-		background-color: #FEF8F2;
+		background-color: #F7F6F4;
 		z-index: 1;
 		width:65%;
 		display: flex;
@@ -1082,7 +1087,7 @@
 		}
 
 		.Mui-selected{
-			background-color: #F79D65;
+			background-color: #FDAE38;
 		}
 
 		svg{
@@ -1096,8 +1101,8 @@
 	#main {
 		margin-left: $size-header-width;
 		max-width: 50em + $size-header-pad;
-		padding: ($size-header-pad * 2.5) $size-header-pad $size-header-pad $size-header-pad;
-		width: calc(100% - #{$size-header-width});
+		padding: ($size-header-pad * 1.9) $size-header-pad $size-header-pad $size-header-pad;
+		width: calc(100% - #{$size-header-width });
 
 		> section {
 			border-top: solid 2px _palette(border);
@@ -1110,6 +1115,32 @@
 				padding-top: 0;
 			}
 		}
+
+		.title-logo{
+			display: flex;
+			flex-direction: column;
+			padding: 10px;
+			width: auto;
+
+			img{
+				width: auto;
+    			height: 3em;
+				background-color: #fff;
+				border-radius: 5px;
+				box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+				margin-top: 5px;
+				padding: 0.5em;
+			}
+
+			b{
+				font-weight: 500;
+				font-size: 0.9em;
+			}
+
+		
+		}
+
+	
 	}
 
 /* Poptrox */
@@ -1295,21 +1326,20 @@
 			body, input, select, textarea {
 				font-size: 12pt;
 			}
-
+	
 	}
 
 /* Large */
 
 	@include breakpoint(large) {
 
-		$size-header-width: 30%;
-		$size-header-pad: 3em;
+		$size-header-pad: 2em;
 
 		/* Header */
 
 			#header {
 				padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
-				width: $size-header-width;
+				width: $size-header-width ;
 
 				h1 {
 					font-size: 1.25em;
@@ -1603,6 +1633,22 @@
 				// 		color:_palette(accent2, fg-bold);
 				// 	}
 				// }
+
+				.waves {
+					position: absolute;
+					// transform: scaleY(2);
+					bottom: 0;
+					left: 0;
+					right: 0;
+					height:700px;
+					z-index: 0;
+				}
+
+				.wave1 {
+					animation: moveWave1 10s ease-in-out  infinite alternate !important;
+					// transform: scale(2,2);
+
+				}
 			}
 
 		/* Footer */
@@ -1627,6 +1673,10 @@
 			position: fixed;
 			width: 100%;
 			z-index: 1;
+		}
+
+		#main{
+			margin-top: $size-header-width * 0.5;
 		}
 
 	}
