@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Grid, Tooltip, Zoom } from '@material-ui/core'
-import { withStyles, makeStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core/styles'
 
 const TooltipCustom = withStyles((theme) => ({
   tooltip: {
@@ -11,7 +11,7 @@ const TooltipCustom = withStyles((theme) => ({
 
 export default function CardLogo({ img, title }) {
   return (
-    <Grid item>
+    <Grid item className="card-logo">
       <TooltipCustom title={title} TransitionComponent={Zoom} arrow>
         <img src={img} alt="Image" />
       </TooltipCustom>

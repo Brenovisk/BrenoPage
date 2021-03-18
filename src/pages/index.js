@@ -6,6 +6,7 @@ import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
 import LabelBottomNavigation from '../components/Menu/index.js'
 import CardLogo from '../components/CardLogo'
+import CardLogoText from '../components/CardLogoText'
 
 //Imports Logos
 import NepenLogo from '../assets/images/Logos/nepenlogo.svg'
@@ -17,6 +18,9 @@ import StyledComp from '../assets/images/Logos/StyledComp.svg'
 import GitLogo from '../assets/images/Logos/Git.svg'
 import JavaLogo from '../assets/images/Logos/Java.svg'
 import PHPLogo from '../assets/images/Logos/PHP.svg'
+import IFCELogo from '../assets/images/Logos/IFCELogo.png'
+import IMPARHLogo from '../assets/images/Logos/IMPARHLogo.jpg'
+import SENACLogo from '../assets/images/Logos/SENACLogo.png'
 
 import { Grid } from '@material-ui/core'
 
@@ -78,10 +82,38 @@ const HomeIndex = () => {
               <Grid item>
                 <div className="title-logo">
                   <b>Hard Skills </b>
-                  <CardLogo
-                    img={NepenLogo}
-                    title="Núcleo de Estudos e Pesquisa do Nordeste"
-                  />
+                  <CardLogoText
+                    img={IFCELogo}
+                    title="Instituto Federal de Educação Ciência e Tecnologia do Ceará"
+                  >
+                    <ul>
+                      <li>
+                        Graduando em Bacharelado em Engenharia de
+                        Telecomunicações (Cursando).
+                      </li>
+                      <li> Graduado em Técnico em Mecânica (2010- 2014).</li>
+                    </ul>
+                  </CardLogoText>
+                  <CardLogoText
+                    img={IMPARHLogo}
+                    title="Instituto Municipal de Pesquisas Administração e Recursos Humanos"
+                  >
+                    <ul>
+                      <li> Inglês intermediário (2010- 2014).</li>
+                    </ul>
+                  </CardLogoText>
+                  <CardLogoText
+                    img={SENACLogo}
+                    title="Serviço Nacional de Aprendizagem Comercial"
+                  >
+                    <ul>
+                      <li>Montagem e Manutenção de Computadores (2013).</li>
+                    </ul>
+                  </CardLogoText>
+                </div>
+
+                <div className="title-logo">
+                  <b>Soft Skills </b>
                 </div>
               </Grid>
             </Grid>
